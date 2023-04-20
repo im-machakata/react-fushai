@@ -1,34 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Component } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+export interface IProps {
+    type: String,
+    placeholder: String,
+}
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+class App extends Component<IProps> {
+
+  state = {};
+  calculate(){}
+  render() {
+    return (
+      <section className="bg-neutral-800 flex justify-center align-middle h-screen py-8">
+        <div className="h-full lg:w-1/3 shadow-md bg-white lg:p-4 p-2 flex flex-col justify-center align-middle rounded-lg text-center">
+          <h1 className="text-4xl font-extrabold text-neutral-800">fushai</h1>
+          
+          <button className="btn">Calculate</button>
+        </div>
+      </section>
+    )
+  }
 }
 
 export default App
