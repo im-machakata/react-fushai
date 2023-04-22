@@ -3,6 +3,7 @@ import React, { HTMLInputTypeAttribute } from 'react';
 interface InputBoxProps {
     type: HTMLInputTypeAttribute,
     label: String,
+    min?: HTMLInputTypeAttribute,
     // onSubmit: (value: string) => void;
 }
 
@@ -14,6 +15,7 @@ class InputBox extends React.Component<InputBoxProps, InputBoxState> {
     constructor(props: InputBoxProps) {
         super(props);
         this.state = { value: '' };
+
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -29,9 +31,9 @@ class InputBox extends React.Component<InputBoxProps, InputBoxState> {
 
     render() {
         return (
-            <section contentEditable="true" onChange={this.handleChange}>
+            <section className="flex justify-start flex-col mb-3 input-box" onChange={this.handleChange}>
                 <div className="input-label">{this.props.label}</div>
-                <input type={this.props.type} className='input-item' />
+                <input type={this.props.type} min={this.props.min == null ? 1 : this.props.min} className="input-item" />
             </section>
         );
     }
