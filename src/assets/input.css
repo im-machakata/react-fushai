@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply py-4 px-4 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 w-48 mx-auto mt-4 uppercase;
+    @apply py-5 px-4 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 w-full mx-auto uppercase;
   }
   .input-label {
     @apply text-neutral-600 text-left mt-1 -mb-3 z-20;
