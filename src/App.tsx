@@ -5,7 +5,7 @@ export interface IProps {
     placeholder: String,
 }
 
-class App extends Component<IProps> {
+class App extends Component {
 
   state = {};
   calculate(){}
