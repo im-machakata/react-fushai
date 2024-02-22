@@ -12,9 +12,9 @@ class App extends Component {
   render() {
     return (
       <section className="bg-neutral-800 flex justify-center align-middle h-screen py-8">
-        <div className="h-full lg:w-1/3 shadow-md bg-white lg:p-4 p-2 flex flex-col justify-center align-middle rounded-lg text-center">
+        <div className="h-full lg:w-1/3 shadow-md bg-white lg:p-4 p-2 lg:px-6 flex flex-col justify-center align-middle rounded-xl text-center">
           <h1 className="text-6xl font-extrabold text-neutral-800">fushai</h1>
-          <p className="text-neutral-600 mb-6 lowercase md:uppercase">Your annual investment calculator</p>
+          <p className="text-neutral-600 mb-6 lowercase md:uppercase font-bold">Your annual investment calculator</p>
           {/* Number of people contributing eg. 5 */}
           <InputBox type="number" min="2" label="No of people"/>
           {/* Number of months to contribute eg. 11 */}
